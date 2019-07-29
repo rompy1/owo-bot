@@ -1,7 +1,6 @@
 discord
 asyncio
 pip
-time
 random
 urllib
 json
