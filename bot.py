@@ -21,8 +21,9 @@ async def on_ready():
 
 @bot.command(aliases = ["p"])
 async def ping(ctx):
-    """Says Pong!"""
-    await ctx.send("UwU")
+    """checks if bot is running (admin only)"""
+    if ctx.author.id == 192735146003267584 or 133642107259846657:
+        await ctx.send("UwU")
 
 
 @bot.command()
@@ -31,16 +32,16 @@ async def shutdown(ctx):
     if ctx.author.id == 192735146003267584 or 133642107259846657:
         await ctx.send("Goodbye senpai uwu")
         exit()
-    else:
-        await ctx.send("I'm sorry, you don't have permission to do that!")
+    #else:
+        #await ctx.send("I'm sorry, you don't have permission to do that!")
 
 
-@bot.command()
-async def pm(ctx, sendto: str, msgtosend: str):
-    msg = ctx.message
-    user = await bot.get_user_info(int(sendto))
-    await user.send(msgtosend)
-    await msg.add_reaction("✅")
+#@bot.command()
+#async def pm(ctx, sendto: str, msgtosend: str):
+#    msg = ctx.message
+#    user = await bot.get_user_info(int(sendto))
+#    await user.send(msgtosend)
+#    await msg.add_reaction("✅")
 
 
 
@@ -52,8 +53,9 @@ async def on_message(message):
     await bot.process_commands(message)
 
 
-@bot.command()
+@bot.command(aliases = ["uwufy"])
 async def owofy(ctx):
+    """OwOfy a message! Usage: ^owofy [message]"""
     msg = ctx.message
     try:
         await msg.delete()
