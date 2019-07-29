@@ -73,5 +73,16 @@ async def owofy(ctx):
     else:
         await ctx.send("You need to put a message after the command! (^owofy [message])")
 
+@bot.command(aliases = ["git"])
+async def github(ctx):
+    """PMs you the github link"""
+    user = await bot.get_user_info(int(sendto))
+    await user.send(https://github.com/rompy1/owo-bot)
+    try:
+        await msg.delete()
+    except:
+        pass
+    
+    
 
 bot.run(str(os.environ.get('BOT_TOKEN')))
