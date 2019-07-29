@@ -1,7 +1,6 @@
 discord
 asyncio
 pip
-random
 urllib
 json
 ssl
