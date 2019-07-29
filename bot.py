@@ -22,14 +22,14 @@ async def on_ready():
 @bot.command(aliases = ["p"])
 async def ping(ctx):
     """checks if bot is running (admin only)"""
-    if ctx.author.id == 192735146003267584 or 133642107259846657:
+    if ctx.author.id == 192735146003267584 or ctx.author.id == 133642107259846657:
         await ctx.send("UwU")
 
 
 @bot.command()
 async def shutdown(ctx):
     """shutdown the bot (admin only)"""
-    if ctx.author.id == 192735146003267584 or 133642107259846657:
+    if ctx.author.id == 192735146003267584 or ctx.author.id == 133642107259846657:
         await ctx.send("Goodbye senpai uwu")
         exit()
     #else:
