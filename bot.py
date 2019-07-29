@@ -82,6 +82,12 @@ async def github(ctx):
         await msg.delete()
     except:
         pass
+
+@bot.command()
+async def servers(ctx):
+    """Lists the amount of servers I'm running on"""
+    amount = len(bot.guilds)
+    await ctx.send("%d servers are currently OwOfied!" % amount)
     
     
 
