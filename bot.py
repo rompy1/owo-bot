@@ -8,7 +8,7 @@ from random import randrange
 import json
 import ssl
 
-bot = commands.Bot(command_prefix='^', description="I am a test")
+bot = commands.Bot(command_prefix='^', description="Now with 100% more cringe!")
 
 @bot.event
 async def on_ready():
