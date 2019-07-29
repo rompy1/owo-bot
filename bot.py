@@ -76,7 +76,7 @@ async def owofy(ctx):
 @bot.command(aliases = ["git"])
 async def github(ctx):
     """PMs you the github link"""
-    user = await bot.get_user_info(int(sendto))
+    user = ctx.author
     await user.send("https://github.com/rompy1/owo-bot")
     try:
         await msg.delete()
