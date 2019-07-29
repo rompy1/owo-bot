@@ -47,7 +47,7 @@ async def pm(ctx, sendto: str, msgtosend: str):
 @bot.event
 async def on_message(message):
     if "owo" in message.content.lower() or "uwu" in message.content.lower():
-        if "^" not in message.content.lower() and message.author.id != 456091144502247444:
+        if "^" not in message.content.lower() and message.author.id != 605445941285224455:
             await message.channel.send("What's this?")
     await bot.process_commands(message)
 
