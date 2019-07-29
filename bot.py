@@ -62,13 +62,16 @@ async def owofy(ctx):
     except:
         pass
     totranslate = str(msg.content)
-    id = ('<@%s>' % ctx.author.id)
-    totranslate = totranslate.replace("^owofy", "")
-    totranslate = totranslate.replace("r", "w")
-    totranslate = totranslate.replace("l", "w")
-    #totranslate = totranslate.replace("you", "senpai")
-    totranslate = totranslate + " UwU" + ("\n - %s" % id)
-    await ctx.send(totranslate)
+    if len(totranslate) > 6:
+        id = ('<@%s>' % ctx.author.id)
+        totranslate = totranslate.replace("^owofy", "")
+        totranslate = totranslate.replace("r", "w")
+        totranslate = totranslate.replace("l", "w")
+        #totranslate = totranslate.replace("you", "senpai")
+        totranslate = totranslate + " UwU" + ("\n - %s" % id)
+        await ctx.send(totranslate)
+    else:
+        await ctx.send("You need to put a message after the command! (^owofy [message])")
 
 
 bot.run(str(os.environ.get('BOT_TOKEN')))
