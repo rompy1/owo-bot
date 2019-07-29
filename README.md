@@ -1,5 +1,5 @@
 # owo-bot
 
-A simple bot that adds more OwO to a discord server.
+A simple bot that adds more OwO to discord servers.
 
 I regret nothing.
